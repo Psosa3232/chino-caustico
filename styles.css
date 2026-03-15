@@ -1,0 +1,171 @@
+body{
+font-family:'Noto Sans SC',sans-serif;
+margin:0;
+background:linear-gradient(135deg,#667eea,#764ba2);
+min-height:100vh;
+color:#333;
+}
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:20px;
+}
+
+header{
+background:white;
+padding:30px;
+border-radius:10px;
+text-align:center;
+margin-bottom:30px;
+}
+
+.title{
+text-align:center;
+color:white;
+margin-bottom:20px;
+}
+
+.section{
+display:none;
+}
+
+.section.active{
+display:block;
+}
+
+.hsk-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.hsk-card{
+background:white;
+padding:30px;
+border-radius:10px;
+text-align:center;
+cursor:pointer;
+}
+
+.hsk-card.available{
+border:3px solid #50C878;
+}
+
+.hsk-card.coming{
+opacity:0.6;
+}
+
+.tool-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.tool-card{
+background:white;
+padding:30px;
+border-radius:10px;
+cursor:pointer;
+text-align:center;
+}
+
+.btn{
+padding:10px 20px;
+border:none;
+background:#4A90E2;
+color:white;
+border-radius:20px;
+cursor:pointer;
+margin-bottom:20px;
+}
+
+.flashcard-container{
+perspective:1000px;
+width:300px;
+height:350px;
+margin:auto;
+}
+
+.flashcard{
+width:100%;
+height:100%;
+position:relative;
+transform-style:preserve-3d;
+transition:transform 0.6s;
+cursor:pointer;
+}
+
+.flashcard.flipped{
+transform:rotateY(180deg);
+}
+
+.flashcard-front,
+.flashcard-back{
+position:absolute;
+width:100%;
+height:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+border-radius:10px;
+backface-visibility:hidden;
+}
+
+.flashcard-front{
+background:#667eea;
+color:white;
+font-size:2rem;
+}
+
+.flashcard-back{
+background:white;
+transform:rotateY(180deg);
+font-size:2rem;
+}
+
+.controls{
+text-align:center;
+margin-top:20px;
+}
+
+.category-selector{
+text-align:center;
+margin-bottom:20px;
+}
+
+.category-selector button{
+margin:5px;
+padding:8px 15px;
+border:none;
+background:#4A90E2;
+color:white;
+border-radius:20px;
+cursor:pointer;
+}
+
+.coming-box{
+background:white;
+padding:60px;
+border-radius:10px;
+text-align:center;
+}
+
+/* Ajuste para que las flashcards sean más grandes en tablets */
+@media (min-width: 768px) {
+    .flashcard-container {
+        width: 450px;
+        height: 500px;
+    }
+    .hsk-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas claras */
+    }
+}
+
+
+button, .hsk-card, .tool-card, .flashcard {
+    touch-action: manipulation; /* Optimiza el toque en tablets */
+    -webkit-tap-highlight-color: transparent; /* Quita el recuadro feo al tocar */
+}
+

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chino Caústico</title>
+
+<link href="https://cdn.jsdelivr.net/npm/fontsource-noto-sans-sc@5.0.0/index.css" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+<h1>Chino Caústico</h1>
+</header>
+
+
+<!-- MENU PRINCIPAL -->
+
+<div id="main-section" class="section active">
+
+<h2 class="title">Selecciona tu nivel</h2>
+
+<div class="hsk-grid">
+
+<div class="hsk-card available" onclick="showHSK1()">
+<h2>HSK 1</h2>
+<p>Vocabulario básico</p>
+</div>
+
+<div class="hsk-card coming" onclick="showComingSoon()">
+<h2>HSK 2</h2>
+<p>Próximamente</p>
+</div>
+
+<div class="hsk-card coming" onclick="showComingSoon()">
+<h2>HSK 3</h2>
+<p>Próximamente</p>
+</div>
+
+<div class="hsk-card coming" onclick="showComingSoon()">
+<h2>HSK 4</h2>
+<p>Próximamente</p>
+</div>
+
+<div class="hsk-card coming" onclick="showComingSoon()">
+<h2>HSK 5</h2>
+<p>Próximamente</p>
+</div>
+
+<div class="hsk-card coming" onclick="showComingSoon()">
+<h2>HSK 6</h2>
+<p>Próximamente</p>
+</div>
+
+</div>
+</div>
+
+
+
+<!-- MENU HSK1 -->
+
+<div id="hsk1-section" class="section">
+
+<button class="btn" onclick="showMain()">Volver</button>
+
+<h2 class="title">Aprende con: </h2>
+
+<div class="tool-grid">
+
+<div class="tool-card" onclick="showFlashcards()">
+<h3>Cartas de memoria</h3>
+<p>Practica vocabulario</p>
+</div>
+
+<div class="tool-card" onclick="showLetterGame()">
+<h3>Juego de letras</h3>
+<p>Forma palabras</p>
+</div>
+
+<div class="tool-card" onclick="showSentencePuzzle()">
+<h3>Ordenar frases</h3>
+<p>Construye oraciones</p>
+</div>
+
+<div class="tool-card" onclick="showStoryGame()">
+<h3>Historia interactiva</h3>
+<p>Diálogos simples</p>
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- FLASHCARDS -->
+
+<div id="flashcards-section" class="section">
+
+<button class="btn" onclick="showHSK1()">Volver</button>
+
+<h2 class="title">Flashcards</h2>
+
+<div class="category-selector">
+
+<button onclick="filterCategory('all')">Todas</button>
+<button onclick="filterCategory('noun')">Sustantivos</button>
+<button onclick="filterCategory('verb')">Verbos</button>
+<button onclick="filterCategory('adjective')">Adjetivos</button>
+<button onclick="filterCategory('pronoun')">Pronombres</button>
+
+</div>
+
+<div class="flashcard-container">
+
+<div class="flashcard" onclick="flipCard()">
+
+<div class="flashcard-front">
+<div id="card-hanzi">你好</div>
+<div id="card-pinyin">nǐ hǎo</div>
+</div>
+
+<div class="flashcard-back">
+<div id="card-translation">Hola</div>
+</div>
+
+</div>
+
+</div>
+
+<div class="controls">
+
+<button onclick="prevCard()">Anterior</button>
+<button onclick="nextCard()">Siguiente</button>
+
+</div>
+
+</div>
+
+
+
+<!-- PROXIMAMENTE -->
+
+<div id="coming-section" class="section">
+
+<button class="btn" onclick="showMain()">Volver</button>
+
+<div class="coming-box">
+
+<h2>Este nivel estará disponible próximamente</h2>
+<p>Estamos trabajando en más contenido.</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
